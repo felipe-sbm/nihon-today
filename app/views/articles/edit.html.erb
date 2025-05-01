@@ -1,0 +1,18 @@
+<%= form_with model: @article, local: true do |form| %>
+<p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+</p>
+<p>
+    <%= form.label :content %><br>
+    <%= form.text_area :content %>
+</p>
+<p>
+    <%= form.label :author %><br>
+    <%= form.text_field :author %>
+</p>
+<p>
+    <%= form.submit %>
+</p>
+<% end %>
+<%= link_to "Voltar", articles_path %>

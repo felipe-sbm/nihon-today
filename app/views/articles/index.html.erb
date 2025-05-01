@@ -1,0 +1,22 @@
+<h1>News portal</h1>
+
+<h2>NT Blog</h2>
+<ul>
+    <% @articles.each do |article| %>
+    <li>
+        <h3><%= link_to article.title, article %></h3>
+        <p><%= article.content.truncate(100) %></p>
+    </li>
+    <% end %>
+</ul>
+
+<h2>Japan News</h2>
+<ul>
+    <% @news.each do |news| %>
+    <li>
+        <h3><%= link_to news["title"], news["url"], target: "_blank" %></h3>
+        <p><%= news["description"] %></p>
+        <p><em>Fonte: <%= news["source"]["name"] %></em></p>
+    </li>
+    <% end %>
+</ul>
